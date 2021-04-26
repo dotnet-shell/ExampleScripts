@@ -8,7 +8,7 @@ using System.Text.Json;
 // By default the type is a string
 var ps=`ps aux`;
 Console.WriteLine("Result is a "+ps.GetType().Name+" should be a string");
-Console.WriteLine("LastLine = " + ps.Split(Environment.NewLine).Last());
+Console.WriteLine("LastLine = " + ps.Trim().Split(Environment.NewLine).Last());
 
 // But you can also easily convert to other types like an int
 int aNumber=`/bin/echo 500`;
