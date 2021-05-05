@@ -4,6 +4,10 @@ using System.Net.Http;
 using System.Text.Json;
 
 // Variables can easily be created from a command's stdout
+if (string.IsNullOrWhiteSpace(`echo hello`))
+{
+    echo oh no!
+}
 
 // By default the type is a string
 var ps=`ps aux`;
