@@ -1,4 +1,4 @@
-#!/usr/bin/env csxshell
+#!/usr/bin/env dotnet-shell
 #r "nuget: Figgle, 0.4.0"
 
 // This script prints any command line arguments in ASCII art 

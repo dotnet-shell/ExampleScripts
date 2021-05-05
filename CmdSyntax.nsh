@@ -1,4 +1,4 @@
-#!/usr/bin/env csxshell
+#!/usr/bin/env dotnet-shell
 
 using System.Net.Http;
 using System.Text.Json;
@@ -31,7 +31,7 @@ var result = `echo $dirExists$`;
 Console.WriteLine("Directory " + result);
 
 // Or a stream
-Stream stream = `cat CmdSyntax.csxx`;
+Stream stream = `cat CmdSyntax.nsh`;
 Console.WriteLine("Result is a "+stream.GetType().Name);
 
 char x = (char) stream.ReadByte();

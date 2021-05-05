@@ -1,4 +1,4 @@
-#!/usr/bin/env csxshell
+#!/usr/bin/env dotnet-shell
 using static System.Console;
 
 WriteLine("OK to go? Y/N:");
