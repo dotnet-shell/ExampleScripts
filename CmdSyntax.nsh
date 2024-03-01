@@ -18,6 +18,9 @@ Console.WriteLine("LastLine = " + ps.Trim().Split(Environment.NewLine).Last());
 int aNumber=`/bin/echo 500`;
 Console.WriteLine("Result is a "+aNumber.GetType().Name+" "+aNumber+" should be an int with value 500");
 
+// Or a list
+List<string> z=`dmesg`; z.Distinct().Count();
+
 // StdOut representing a file path can be converted to a file or directory
 FileInfo file = `/bin/echo /bin/ls`;
 var exists = file.Exists ? "Exists" : "Doesn't exist";
@@ -47,7 +50,7 @@ public class IPInfo
 }
 
 using (var client = new HttpClient())
-using (var response = await client.GetAsync("https://ip.seeip.org/jsonip?"))
+using (var response = await client.GetAsync("https://api64.ipify.org?format=json"))
 using (var content = response.Content)
 {
     var obj = JsonSerializer.Deserialize<IPInfo>(await content.ReadAsStringAsync());
